@@ -15,9 +15,10 @@ const Header = () => {
     <motion.header
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ duration: 5.8, ease: 'easeOut' }}
+      style={{ zIndex: 1000, position: 'relative' }}
     >
-      <Navbar bg="transparent" expand="lg" fixed="top" className="custom-navbar">
+      <Navbar bg="transparent" expand="lg" className="custom-navbar">
         <Container>
           <Navbar.Brand className="brand-container">
             <motion.img 
@@ -34,7 +35,7 @@ const Header = () => {
             </motion.span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar id="basic-navbar-nav">
             <Nav className="ms-auto nav-links">
               <Nav.Link onClick={() => scrollToSection('about-section')}>About</Nav.Link>
               <Nav.Link onClick={() => scrollToSection('movies-section')}>Movies</Nav.Link>
@@ -42,7 +43,7 @@ const Header = () => {
               <Nav.Link onClick={() => scrollToSection('register-form')}>Register</Nav.Link>
               <Nav.Link onClick={() => scrollToSection('contact-section')}>Contact</Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          </Navbar>
         </Container>
       </Navbar>
     </motion.header>

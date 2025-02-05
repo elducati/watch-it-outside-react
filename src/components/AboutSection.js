@@ -9,24 +9,24 @@ import image3 from '../images/6.jpeg';
 const AboutSection = () => {
   return (
     <motion.div 
-      className="about-section"
+      className="about-section bg-gray-100 p-8 rounded-lg shadow-lg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h2>About Us</h2>
-      <Carousel>
+      <h2 className="text-3xl font-bold mb-6 text-center">About Us</h2>
+      <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
         <div>
-          <img src={image1} alt="About 1" />
-          <p className="legend">Our Mission</p>
+          <img src={image1} alt="About 1" className="rounded-lg" />
+          <p className="legend bg-gray-800 text-white p-2 rounded-b-lg">Our Mission</p>
         </div>
         <div>
-          <img src={image2} alt="About 2" />
-          <p className="legend">Our Vision</p>
+          <img src={image2} alt="About 2" className="rounded-lg" />
+          <p className="legend bg-gray-800 text-white p-2 rounded-b-lg">Our Vision</p>
         </div>
         <div>
-          <img src={image3} alt="About 3" />
-          <p className="legend">Our Values</p>
+          <img src={image3} alt="About 3" className="rounded-lg" />
+          <p className="legend bg-gray-800 text-white p-2 rounded-b-lg">Our Values</p>
         </div>
       </Carousel>
     </motion.div>
